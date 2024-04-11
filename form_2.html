@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Formulir dengan Modal Bootstrap</title>
+<style>
+    body {
+    font-family: 'Times New Roman', Times, serif, sans-serif;
+background-image:url("https://media.istockphoto.com/id/949848900/vector/seamless-pattern-with-cute-small-pink-hearts.jpg?s=612x612&w=0&k=20&c=A9moh4uWP3crYXYzPVbaIauHR5RkM93ly3hfiI6Ep3k=");
+    margin: 0;
+    padding: 0;
+  }
+  
+  form {
+    width: 300px;
+    margin: 50px auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  label {
+    font-weight: bold;
+  }
+  
+  input[type="text"],
+  input[type="email"],
+  input[type="submit"] {
+    width: calc(100% - 12px);
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  input[type="submit"] {
+    background-color: #007bff;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  input[type="submit"]:hover {
+    background-color: #0056b3;
+  }
+  </style>
+<!-- Memuatkan Bootstrap CSS -->
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+
+    <audio autoplay>
+        <source src="Y2meta.app - H.E.R. - Best Part.mp3" type="audio/mpeg">
+      </audio>
+
+<!-- Formulir -->
+<form>
+    <h1>Hai Irma <3</h1>
+  <label for="nama">siapa yang ulang tahun hari ini?:</label><br>
+  <input type="text" id="nama" name="nama"><br>
+  <p><em>tuliskan nama lengkap orang yang ada di pikiranku</em></p> 
+
+  <!-- Tombol submit -->
+  <button type="submit" class="btn btn-primary">pencet</button>
+</form>
+
+<!-- Modal -->
+<div class="modal" id="exampleModal" tabindex="-1">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Informasi</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <p><strong>woiii kamu peramal yaa!!!</strong></p>
+        <P>yaudah ini yesaya ada nitip pesen ke peramal</P>
+      
+  
+        <!-- Tombol halaman selanjutnya di dalam modal -->
+        <a href="form_selanjutnya.html" class="btn btn-primary" id="nextPageBtn">Halaman Selanjutnya</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Memuatkan Bootstrap JavaScript -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+<script>
+  document.querySelector("form").addEventListener("submit", function(event) {
+    event.preventDefault();
+
+    var nama = document.getElementById("nama").value;
+
+    if (nama.toLowerCase() !== "irma alycia permata sari purba") {
+      alert("masa gatau siii");
+    } else {
+      $('#exampleModal').modal('show');
+    }
+  });
+</script>
+
+</body>
+</html>
